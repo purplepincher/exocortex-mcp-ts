@@ -13,7 +13,7 @@
     "lint": "tsc --noEmit"
   },
   "keywords": ["mcp", "exocortex", "notebook", "machine-learning", "rest-api", "json-rpc"],
-  "author": "SuperInstance",
+  "author": "purplepincher",
   "license": "MIT",
   "repository": {
     "type": "git",

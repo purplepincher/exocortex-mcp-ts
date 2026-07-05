@@ -12,6 +12,7 @@ function makeRequest(method: string, path: string, body?: any): Promise<{ status
       path,
       method,
       headers: { 'Content-Type': 'application/json' },
+      agent: false,
     };
 
     const req = http.request(options, (res) => {
@@ -46,6 +47,10 @@ beforeAll(async () => {
 
 afterAll(async () => {
   await new Promise<void>((resolve) => server.close(() => resolve()));
+  // Force-close any idle keep-alive sockets so Jest never waits on them.
+  if (typeof (server as any).closeAllConnections === 'function') {
+    (server as any).closeAllConnections();
+  }
 });
 
 describe('REST API', () => {

@@ -1,6 +1,6 @@
 {
   "name": "exocortex-mcp-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript implementation of the Exocortex MCP server + REST API — the web-native interface to the notebook runtime",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
